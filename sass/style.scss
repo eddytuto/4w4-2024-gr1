@@ -1,0 +1,20 @@
+/*
+Theme Name: Theme Eddy
+Author: Eddy Martin
+Author URI: https://referenced.ca/
+Description: Thème de base développé dans le cours 4W4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-eddy
+*/
+
+/*
+https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+*/
+
+@import "variables";
+
+@import "layout";
+
+@import "base/h";
