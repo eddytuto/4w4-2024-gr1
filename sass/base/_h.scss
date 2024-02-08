@@ -3,10 +3,16 @@
 https://chrisburnell.com/clamp-calculator/
 */
 h1{
-   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+   font-size : clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+   font-weight: 600;
+   font-style: normal;
 }
 
-h2{}
+h2{
+   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+   font-weight: 500;
+   font-style: normal;
+}
 h3{}
 h4{}
 h5{}

@@ -28,16 +28,19 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 body {
   display: flex;
   flex-direction: column;
+  font-family: "prompt", sans-serif;
 }
 
 .global {
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 1100px;
+  flex: 0 1 900px;
   border: 1px solid #aaa;
 }
 
@@ -65,5 +68,13 @@ body {
 https://chrisburnell.com/clamp-calculator/
 */
 h1 {
+  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  font-weight: 600;
+  font-style: normal;
+}
+
+h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+  font-weight: 500;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
