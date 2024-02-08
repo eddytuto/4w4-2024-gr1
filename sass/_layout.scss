@@ -19,9 +19,14 @@ body{
 .global > header,
 .global > footer {
     flex : 0 1 900px;
-    border : 1px solid #aaa;
+    //border : 1px solid #aaa;
+    padding: 3rem 1rem;
+    // background-color: rgba(0,0,0,.1);
+    background-color: rgba(255,255,255,var(--transparence-section));
 }
-
+#entete, #footer {
+    min-height: 20vh;
+}
 #entete{
     background-color: var(--couleur-arriere-entete);
 }
