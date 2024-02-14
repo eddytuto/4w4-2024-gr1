@@ -13,13 +13,43 @@ Text Domain: theme-eddy
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
+  /*
   --couleur-arriere-entete: #3ca5ff;
   --couleur-arriere-accueil: #add70c;
   --couleur-arriere-evenement: #32994f;
   --couleur-arriere-galerie: rgb(230 139 42);
   --couleur-arriere-footer: #6d5b48;
-  --transparence-h1: .4;
-  --transparence-section: .1;
+
+  // Niveau de transparence des h
+  --transparence-h1 : .4;
+  // Transparence section
+  --transparence-section : .1;
+
+  */
+  /* Calcul des teintes) */
+  --u1: 180;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30);
+  /* La saturation  et luminosité */
+  --s-arriere: 100%;
+  --s-avant: 90%;
+  --l-arriere: 30%;
+  --l-avant: 42%;
+  
+  /* couleur arrière plan - background-color */
+
+  --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-accueil:hsl(var(--u2),var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement:hsl(var(--u3),var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere), var(--l-arriere));
+  /* couleur avant plan  - color  */
+  --couleur-entete: hsl(var(--u1),var(--s-avant), var(--l-avant));
+  --couleur-accueil:hsl(var(--u2),var(--s-avant), var(--l-avant));
+  --couleur-evenement:hsl(var(--u3),var(--s-avant), var(--l-avant));
+  --couleur-galerie: hsl(var(--u4),var(--s-avant), var(--l-avant));
+  --couleur-footer: hsl(var(--u1),var(--s-avant), var(--l-avant));
 }
 
 * {
@@ -53,23 +83,27 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
-  position: relative;
+  color: var(--couleur-entete);
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-accueil);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-evenement);
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-galerie);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
 }
 
 /*
@@ -77,7 +111,6 @@ https://chrisburnell.com/clamp-calculator/
 */
 h1 {
   font-size: clamp(1.5rem, -2.656rem + 12.5vw, 4.375rem);
-  color: rgba(8, 40, 86, var(--transparence-h1));
   font-weight: 600;
   font-style: normal;
 }
@@ -86,35 +119,4 @@ h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  color: rgba(5, 5, 5, 0.5);
-}
-
-.vague {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.vague svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 72px;
-}
-
-.diagonal {
-  position: relative;
-  isolation: isolate;
-}
-
-.diagonal::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transform: skewY(-5deg);
-  background-color: var(--couleur-arriere-galerie);
-  z-index: -1;
 }/*# sourceMappingURL=style.css.map */

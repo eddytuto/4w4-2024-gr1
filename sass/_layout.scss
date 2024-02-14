@@ -29,18 +29,23 @@ body{
 }
 #entete{
     background-color: var(--couleur-arriere-entete);
-    position : relative;
+    color : var(--couleur-entete);
+
 
 }
 #accueil{
     background-color: var(--couleur-arriere-accueil);
+    color : var(--couleur-accueil);
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
+    color : var(--couleur-evenement);
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
+    color : var(--couleur-galerie);
 }
 #footer{
     background-color: var(--couleur-arriere-footer);
+    color : var(--couleur-footer);
 }
