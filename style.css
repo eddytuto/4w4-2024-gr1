@@ -53,6 +53,7 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  position: relative;
 }
 
 #accueil {
@@ -86,4 +87,34 @@ h2 {
   font-weight: 500;
   font-style: normal;
   color: rgba(5, 5, 5, 0.5);
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
