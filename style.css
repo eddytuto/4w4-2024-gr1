@@ -31,14 +31,13 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --u2: calc(var(--u1) + 180);
   --u3: calc(var(--u2) - 30);
   --u4: calc(var(--u2) + 30);
-  /* La saturation  et luminosité */
+  /* La saturation */
   --s-arriere: 100%;
-  --s-avant: 90%;
+  --s-avant: 50%;
+  /* la luminosité */
   --l-arriere: 30%;
-  --l-avant: 42%;
-  
+  --l-avant: 20%;
   /* couleur arrière plan - background-color */
-
   --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere));
   --couleur-arriere-accueil:hsl(var(--u2),var(--s-arriere), var(--l-arriere));
   --couleur-arriere-evenement:hsl(var(--u3),var(--s-arriere), var(--l-arriere));
@@ -84,6 +83,7 @@ body {
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
+  position: relative;
 }
 
 #accueil {
@@ -99,6 +99,7 @@ body {
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
+  position: relative;
 }
 
 #footer {
@@ -119,4 +120,25 @@ h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-accueil);
 }/*# sourceMappingURL=style.css.map */

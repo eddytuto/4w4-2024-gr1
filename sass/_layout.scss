@@ -30,6 +30,7 @@ body{
 #entete{
     background-color: var(--couleur-arriere-entete);
     color : var(--couleur-entete);
+    position : relative;
 
 
 }
@@ -44,6 +45,7 @@ body{
 #galerie{
     background-color: var(--couleur-arriere-galerie);
     color : var(--couleur-galerie);
+    position : relative;
 }
 #footer{
     background-color: var(--couleur-arriere-footer);
