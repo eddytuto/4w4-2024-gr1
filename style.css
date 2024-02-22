@@ -13,19 +13,6 @@ Text Domain: theme-eddy
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
-  /*
-  --couleur-arriere-entete: #3ca5ff;
-  --couleur-arriere-accueil: #add70c;
-  --couleur-arriere-evenement: #32994f;
-  --couleur-arriere-galerie: rgb(230 139 42);
-  --couleur-arriere-footer: #6d5b48;
-
-  // Niveau de transparence des h
-  --transparence-h1 : .4;
-  // Transparence section
-  --transparence-section : .1;
-
-  */
   /* Calcul des teintes) */
   --u1: 220;
   --u2: calc(var(--u1) + 180);
@@ -37,14 +24,6 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   /* la luminosité */
   --l-arriere: 30%;
   --l-avant: 20%;
-  /* couleur arrière plan - background-color */
-  /*
-  --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-accueil:hsl(var(--u2),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement:hsl(var(--u3),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere), var(--l-arriere));
-   */
   /* couleur avant plan  - color  */
   --couleur-entete: hsl(var(--u1),var(--s-avant), var(--l-avant));
   --couleur-accueil:hsl(var(--u2),var(--s-avant), var(--l-avant));
@@ -63,6 +42,7 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-evenement:hsl(var(--u1),100%,20% );
   --couleur-galerie: hsl(var(--u1),100%,15% );
   --couleur-footer: hsl(var(--u1),100%,15% );
+  --couleur-arriere-diagonal: hsl(var(--u2), 100%, 80%);
 }
 
 * {
@@ -85,9 +65,13 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px;
+  flex: 0 1 1100px;
   padding: 3rem 1rem;
   background-color: rgba(255, 255, 255, var(--transparence-section));
+}
+
+.global > header {
+  flex: 1;
 }
 
 #entete, #footer {
@@ -98,6 +82,7 @@ body {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
+  min-height: 100vh;
 }
 
 #accueil {
@@ -122,6 +107,12 @@ body {
   color: var(--couleur-footer);
 }
 
+.entete__header {
+  background-image: url("images/wordpress-theme.png");
+  background-repeat: no-repeat;
+  background-position: 95% 40%;
+}
+
 /*
 https://chrisburnell.com/clamp-calculator/
 */
@@ -136,6 +127,34 @@ h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
+}
+
+span {
+  display: block;
+}
+
+a {
+  color: var(--couleur-lien);
+}
+a:hover {
+  color: var(--couleur-lien-hover);
+}
+a:visited {
+  color: var(--couleur-lien-visited);
+}
+
+button {
+  font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
+  padding: 12px 24px;
+  background-image: linear-gradient(120deg, #e8cf54, #f7d306);
+  margin-top: 30px;
+  transition: transform 0.2s;
+  transform: translateY(0);
+}
+
+button:hover {
+  background-image: linear-gradient(120deg, #e19057, #91672b);
+  transform: translateY(-10px);
 }
 
 .vague {
@@ -174,7 +193,7 @@ h2 {
   bottom: 0;
   */
   inset: 0;
-  background-color: var(--couleur-arriere-entete);
+  background-color: var(--couleur-arriere-diagonal);
   z-index: -1;
   transform: skewY(-5deg);
 }/*# sourceMappingURL=style.css.map */

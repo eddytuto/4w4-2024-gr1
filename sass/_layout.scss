@@ -18,19 +18,26 @@ body{
 .global > section,
 .global > header,
 .global > footer {
-    flex : 0 1 900px;
+    flex : 0 1 1100px;
     //border : 1px solid #aaa;
     padding: 3rem 1rem;
     // background-color: rgba(0,0,0,.1);
     background-color: rgba(255,255,255,var(--transparence-section));
 }
+
+.global > header{
+    flex: 1;
+    
+}
+
 #entete, #footer {
     min-height: 20vh;
 }
 #entete{
     background-color: var(--couleur-arriere-entete);
     color : var(--couleur-entete);
-    position : relative;
+    position: relative;
+min-height: 100vh;
 
 
 }

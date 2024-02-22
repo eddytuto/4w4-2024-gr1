@@ -14,7 +14,8 @@
     bottom: 0;
     */
     inset :0;
-    background-color:var(--couleur-arriere-entete);
+  // background-color:var(--couleur-arriere-entete);
+    background-color:var(--couleur-arriere-diagonal);
    // opacity : .5;
     z-index : -1;
     transform: skewY(-5deg);

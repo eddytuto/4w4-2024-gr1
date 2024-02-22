@@ -17,7 +17,13 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
 @import "layout";
 
+@import "entete";
+
 @import "base/h";
+
+@import "base/liens";
+
+@import "base/bouton";
 
 @import "effet/vague";
 
