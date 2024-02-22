@@ -41,6 +41,7 @@ body{
 #evenement{
     background-color: var(--couleur-arriere-evenement);
     color : var(--couleur-evenement);
+    z-index: 1;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
@@ -50,4 +51,5 @@ body{
 #footer{
     background-color: var(--couleur-arriere-footer);
     color : var(--couleur-footer);
+ 
 }
