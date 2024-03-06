@@ -12,7 +12,6 @@
     --l-arriere : 30%;
     --l-avant : 20%;
 
-
 /* couleur avant plan  - color  */
     --couleur-entete: hsl(var(--u1),var(--s-avant), var(--l-avant));
     --couleur-accueil:hsl(var(--u2),var(--s-avant), var(--l-avant));
@@ -44,4 +43,8 @@
 --couleur-footer: hsl(var(--u1),100%,15% );
 
 --couleur-arriere-diagonal : hsl(var(--u2), 100%, 80%); 
+}
+
+.carte {
+   --_couleur-arriere: hsl(var(--u1),100%, 85% );
 }

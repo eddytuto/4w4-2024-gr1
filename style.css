@@ -45,6 +45,10 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-arriere-diagonal: hsl(var(--u2), 100%, 80%);
 }
 
+.carte {
+  --_couleur-arriere: hsl(var(--u1),100%, 85% );
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -208,7 +212,9 @@ button:hover {
 .carte {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 0 1 20%;
+  justify-content: center;
+  flex: 1 0 225px;
   border: 1px solid #aaa;
+  background-color: var(--_couleur-arriere);
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */

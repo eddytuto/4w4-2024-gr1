@@ -3,12 +3,17 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1rem;
+    
 }
 
 .carte{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex: 0  1 20%;
+    justify-content: center;
+   // align-items: center;
+   // text-align: center;
+    flex: 1  0 calc(900px/4);
     border : 1px solid #aaa;
+    background-color: var(--_couleur-arriere);
+    padding: 1rem;
 }
