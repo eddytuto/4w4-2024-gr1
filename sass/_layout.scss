@@ -34,8 +34,9 @@ body{
     min-height: 20vh;
 }
 
-#menu {
-
+#menu__entete {
+    position : relative;
+    background-color: var(--couleur-arriere-menu);
 }
 
 #entete{

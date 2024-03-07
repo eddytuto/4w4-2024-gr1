@@ -26,6 +26,7 @@
 /* Couleur monochrome */
 
 /* couleur arrière plan - background-color */
+--couleur-arriere-menu: hsl(var(--u1), 100%, 30% );
 --couleur-arriere-entete: hsl(var(--u1), 100%, 70% );
 --couleur-arriere-accueil:hsl(var(--u1),100%, 75% );
 // --couleur-arriere-evenement:hsl(var(--u1),100%,80% );
@@ -47,4 +48,12 @@
 
 .carte {
    --_couleur-arriere: hsl(var(--u1),100%, 85% );
+}
+
+#entete {
+    --_couleur-arriere-vague : var(--couleur-arriere-accueil);
+}
+
+#galerie{
+    --_couleur-arriere-vague : var(--couleur-arriere-footer);
 }

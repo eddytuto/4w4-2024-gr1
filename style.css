@@ -32,6 +32,7 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-footer: hsl(var(--u1),var(--s-avant), var(--l-avant));
   /* Couleur monochrome */
   /* couleur arrière plan - background-color */
+  --couleur-arriere-menu: hsl(var(--u1), 100%, 30% );
   --couleur-arriere-entete: hsl(var(--u1), 100%, 70% );
   --couleur-arriere-accueil:hsl(var(--u1),100%, 75% );
   --couleur-arriere-footer: hsl(var(--u1),100%,70% );
@@ -47,6 +48,14 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
 .carte {
   --_couleur-arriere: hsl(var(--u1),100%, 85% );
+}
+
+#entete {
+  --_couleur-arriere-vague: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+  --_couleur-arriere-vague: var(--couleur-arriere-footer);
 }
 
 * {
@@ -79,6 +88,11 @@ body {
 
 #entete, #footer {
   min-height: 20vh;
+}
+
+#menu__entete {
+  position: relative;
+  background-color: var(--couleur-arriere-menu);
 }
 
 #entete {
@@ -183,8 +197,8 @@ button:hover {
   height: 72px;
 }
 
-.vague .shape-fill {
-  fill: var(--couleur-arriere-accueil);
+.vague .remplissage {
+  fill: var(--_couleur-arriere-vague);
 }
 
 .diagonal {
@@ -227,13 +241,20 @@ button:hover {
   padding: 1rem;
 }
 
-.menu-principal-container {
-  background-color: black;
-}
-
 .menu {
+  position: absolute;
   display: flex;
   list-style-type: none;
+  flex-direction: column;
+  transform: translateX(300%);
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    transform: translateX(0);
+  }
 }
 
 .menu-item {
@@ -242,4 +263,21 @@ button:hover {
 
 .menu-item a {
   color: #fff;
+}
+
+/* gestion label #burger l'image svg est dans un label */
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
