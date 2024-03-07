@@ -63,7 +63,6 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
 }
 
 .global > section,
@@ -74,7 +73,7 @@ body {
   background-color: rgba(255, 255, 255, var(--transparence-section));
 }
 
-.global > header {
+.global > .entete__header {
   flex: 1;
 }
 
@@ -117,6 +116,9 @@ body {
   background-position: 95% 40%;
 }
 
+/* //////////////////////////////// */
+/* Base */
+/* //////////////////////////////// */
 /*
 https://chrisburnell.com/clamp-calculator/
 */
@@ -161,6 +163,9 @@ button:hover {
   transform: translateY(-10px);
 }
 
+/* //////////////////////////////// */
+/* Effet */
+/* //////////////////////////////// */
 .vague {
   position: absolute;
   bottom: 0;
@@ -202,6 +207,9 @@ button:hover {
   transform: skewY(-5deg);
 }
 
+/* //////////////////////////////// */
+/* Composants */
+/* //////////////////////////////// */
 .cours {
   display: flex;
   flex-wrap: wrap;
@@ -217,4 +225,21 @@ button:hover {
   border: 1px solid #aaa;
   background-color: var(--_couleur-arriere);
   padding: 1rem;
+}
+
+.menu-principal-container {
+  background-color: black;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-item {
+  flex: 1 0 50px;
+}
+
+.menu-item a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

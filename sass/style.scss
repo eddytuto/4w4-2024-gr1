@@ -19,14 +19,27 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
 @import "entete";
 
+/* //////////////////////////////// */
+/* Base */
+/* //////////////////////////////// */
+
 @import "base/h";
 
 @import "base/liens";
 
 @import "base/bouton";
 
+/* //////////////////////////////// */
+/* Effet */
+/* //////////////////////////////// */
+
 @import "effet/vague";
 
 @import "effet/diagonal";
 
+/* //////////////////////////////// */
+/* Composants */
+/* //////////////////////////////// */
+
 @import "composant/cours";
+@import "composant/menu";

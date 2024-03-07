@@ -1,0 +1,21 @@
+
+.menu-principal-container { //nav
+background-color: black;
+}
+
+
+.menu{ //ul
+    display : flex;
+    list-style-type: none;
+}
+
+.menu-item { //li
+    flex: 1 0 50px;
+}
+
+.menu-item a { // li a
+  color : #fff;
+}
+
+
+
