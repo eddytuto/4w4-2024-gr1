@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="menu__entete" class="global">
+        <?php echo get_custom_logo(); ?>
         <input type="checkbox" name="" id="chk_burger">
         <label id="burger" for="chk_burger">
             <svg   width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#fff"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
