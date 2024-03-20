@@ -1,4 +1,4 @@
-.cours{
+.destinations{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -16,4 +16,10 @@
     border : 1px solid #aaa;
     background-color: var(--_couleur-arriere);
     padding: 1rem;
+}
+
+.post-categories { // ul de la liste des catégories
+    display: flex;
+    list-style-type: none;
+    gap : 1rem;
 }
