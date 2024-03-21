@@ -1,0 +1,36 @@
+@use "sass:list";
+
+
+/* Création de classe de couleur */
+@each $nom, $couleurs in $defaut {
+    @each $valeur, $couleur in $couleurs {
+        .clr-#{$nom}-#{$valeur} {
+            color : #{$couleur};
+           
+        }
+            .bck-#{$nom}-#{$valeur} {
+          
+            background-color:  #{$couleur} ;
+        }
+    }
+    }
+
+/* mixin pour agencer des couleurs */
+
+    @mixin couleur-agencement($clr,$bck){
+        color: $clr;
+        @if(list.length($bck)==1){
+            background-color: $bck;
+        }   @else {
+            background-image: linear-gradient(90deg, $bck);
+        }   
+    }   
+    
+
+
+
+    @each $valeur, $clr in $agencement-couleur {
+        .clr-agencement-#{$valeur} {
+            @include couleur-agencement($clr ...);
+        }
+    }  

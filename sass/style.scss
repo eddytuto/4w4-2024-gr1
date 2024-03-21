@@ -13,7 +13,10 @@ Text Domain: theme-eddy
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 
-@import "variables";
+/* Initialisation des variables Sass et css */
+@import "utile/couleurs";
+/* Création des class de couleurs */
+@import "utile/couleurs-class";
 
 @import "layout";
 
