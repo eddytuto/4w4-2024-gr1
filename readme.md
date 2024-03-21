@@ -1,8 +1,5 @@
 # TP1 - Club de voyage
 
-# TP1 - Club de voyage
-
-
 # Exercice 2 (5 points)
 
 - Compléter l'utilisation du mapping de couleurs avec boucle et mixin (1 point)
