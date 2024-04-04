@@ -217,6 +217,18 @@ Ce map contient un map principal et plusieurs sous-map */
   background-color: hsl(70, 100%, 85%);
 }
 
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.flexbox__elm {
+  flex: 1 0 150px;
+  border: 1px solid #aaa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -403,6 +415,16 @@ button:hover {
   display: flex;
   list-style-type: none;
   gap: 1rem;
+}
+.post-categories li {
+  background-color: var(--_couleur-principal);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.post-categories li a {
+  color: white;
+  text-decoration: none;
 }
 
 .menu {
