@@ -222,6 +222,7 @@ Ce map contient un map principal et plusieurs sous-map */
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .flexbox__elm {
