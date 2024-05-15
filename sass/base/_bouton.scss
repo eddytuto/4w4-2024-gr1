@@ -1,4 +1,4 @@
-button {
+.bouton {
     font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
     padding : 12px 24px;
    // background-image: linear-gradient(120deg, var(--bouton-couleur-1), var(--bouton-couleur-2 ));
@@ -8,7 +8,7 @@ button {
    transform : translateY(0);
 }
 
-button:hover {
+.bouton:hover {
     background-image: linear-gradient(120deg, #e19057, #91672b);
     transform : translateY(-10px);
 

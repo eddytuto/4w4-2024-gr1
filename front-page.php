@@ -5,8 +5,13 @@
             <h1><?php echo get_bloginfo("name") ?></h1>
             <h2><?php echo get_bloginfo("description") ?></h2>
             <h3>TIM-Collège de Maisonneuve</h3>
-            <button>Événements</button>
+            <button class="bouton">Événements</button>
         </section>
+
+<?php
+//  $image_url = wp_get_attachment_image_url( $image_id, 'full' );
+?>
+
     <?php get_template_part("gabarits/vague"); ?>
     </div>
     <div id="accueil" class="global">
@@ -34,6 +39,7 @@
     <div id="evenement" class="global diagonal">
         <section>
             <h2>Événement (h2)</h2>
+            <?php echo do_shortcode('[em_destination]'); ?>
         </section>
     </div>
     <div id="galerie" class="global">
