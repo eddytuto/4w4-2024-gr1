@@ -5,7 +5,7 @@
             <h1><?php echo get_bloginfo("name") ?></h1>
             <h2><?php echo get_bloginfo("description") ?></h2>
             <h3>TIM-Collège de Maisonneuve</h3>
-            <button class="bouton">Événements</button>
+            <a href="http://localhost:81/4w4-2024-gr1/conference/" class="bouton">Conférence</a>
         </section>
 
 <?php
