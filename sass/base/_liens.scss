@@ -1,0 +1,11 @@
+a { // font-size: ;
+    color : var(--couleur-lien);
+
+    &:hover{
+        color : var(--couleur-lien-hover);
+    }
+
+    &:visited{
+        color : var(--couleur-lien-visited);
+    }
+}

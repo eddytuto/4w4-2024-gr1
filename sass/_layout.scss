@@ -12,28 +12,57 @@ body{
 .global {
     display : flex;
     justify-content: center;
-    min-height : 40vh;
+
 }
 
 .global > section,
 .global > header,
 .global > footer {
-    flex : 0 1 900px;
-    border : 1px solid #aaa;
+    flex : 0 1 1100px;
+    //border : 1px solid #aaa;
+    padding: 3rem 1rem;
+    // background-color: rgba(0,0,0,.1);
+    background-color: rgba(255,255,255,var(--transparence-section));
+}
+
+.global > .entete__header{
+    flex: 1;
+    
+}
+
+#entete, #footer {
+    min-height: 20vh;
+}
+
+#menu__entete {
+    position : relative;
+   // background-color: var(--couleur-arriere-menu);
 }
 
 #entete{
     background-color: var(--couleur-arriere-entete);
+    color : var(--couleur-entete);
+    position: relative;
+    min-height: 100vh;
+
+
 }
 #accueil{
     background-color: var(--couleur-arriere-accueil);
+    color : var(--couleur-accueil);
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
+    color : var(--couleur-evenement);
+    z-index: 1;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
+    color : var(--couleur-galerie);
+    position : relative;
 }
 #footer{
     background-color: var(--couleur-arriere-footer);
+    color : var(--couleur-footer);
+ 
 }

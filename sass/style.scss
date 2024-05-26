@@ -1,20 +1,50 @@
 /*
-Theme Name: Theme Eddy
+Theme Name: TP2
 Author: Eddy Martin
 Author URI: https://referenced.ca/
 Description: Thème de base développé dans le cours 4W4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-eddy
+Text Domain: TP2
 */
 
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 
-@import "variables";
+/* Initialisation des variables Sass et css */
+@import "utile/couleurs";
+/* Création des class de couleurs */
+@import "utile/couleurs-class";
+
+@import "utile/flexbox";
 
 @import "layout";
 
+@import "entete";
+
+/* //////////////////////////////// */
+/* Base */
+/* //////////////////////////////// */
+
 @import "base/h";
+
+@import "base/liens";
+
+@import "base/bouton";
+
+/* //////////////////////////////// */
+/* Effet */
+/* //////////////////////////////// */
+
+@import "effet/vague";
+
+@import "effet/diagonal";
+
+/* //////////////////////////////// */
+/* Composants */
+/* //////////////////////////////// */
+
+@import "composant/carte";
+@import "composant/menu";

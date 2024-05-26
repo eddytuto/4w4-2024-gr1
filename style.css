@@ -1,23 +1,233 @@
 @charset "UTF-8";
 /*
-Theme Name: Theme Eddy
+Theme Name: TP2
 Author: Eddy Martin
 Author URI: https://referenced.ca/
 Description: Thème de base développé dans le cours 4W4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-eddy
+Text Domain: TP2
 */
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
+/* Initialisation des variables Sass et css */
+/* variable Sass */
+/* palette de couleurs */
+/* A partir des variables de couleurs de la palette choisie
+on un mapping en catégorisant les différentes couleurs,
+Ce map contient un map principal et plusieurs sous-map */
+/* Agencement de couleurs */
 :root {
-  --couleur-arriere-entete: #618aad;
-  --couleur-arriere-accueil: #0f0;
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: rgb(223, 230, 42);
-  --couleur-arriere-footer: #630;
+  /* Calcul des teintes) */
+  --u1: 220;
+  --u2: calc(var(--u1) - 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30);
+  /* La saturation */
+  --s-arriere: 100%;
+  --s-avant: 50%;
+  /* la luminosité */
+  --l-arriere: 30%;
+  --l-avant: 20%;
+  /* couleur avant plan  - color  */
+  --couleur-entete: hsl(var(--u1),var(--s-avant), var(--l-avant));
+  --couleur-accueil:hsl(var(--u2),var(--s-avant), var(--l-avant));
+  --couleur-evenement:hsl(var(--u3),var(--s-avant), var(--l-avant));
+  --couleur-galerie: hsl(var(--u4),var(--s-avant), var(--l-avant));
+  --couleur-footer: hsl(var(--u1),var(--s-avant), var(--l-avant));
+  /* Couleur monochrome */
+  /* couleur arrière plan - background-color */
+  --couleur-arriere-menu: hsl(var(--u1), 100%, 30% );
+  --couleur-arriere-entete: hsl(var(--u1), 100%, 70% );
+  --couleur-arriere-accueil:hsl(var(--u1),100%, 75% );
+  --couleur-arriere-footer: hsl(var(--u1),100%,70% );
+  --couleur-arriere-evenement:var(--couleur-arriere-accueil);
+  --couleur-arriere-galerie:var(--couleur-arriere-accueil);
+  --couleur-entete: hsl(var(--u1), 100%, 30% );
+  --couleur-accueil:hsl(var(--u1),100%, 25% );
+  --couleur-evenement:hsl(var(--u1),100%,20% );
+  --couleur-galerie: hsl(var(--u1),100%,15% );
+  --couleur-footer: hsl(var(--u1),100%,15% );
+  --couleur-arriere-diagonal: hsl(var(--u2), 100%, 80%);
+}
+
+/* variable local */
+.carte {
+  --_couleur-arriere: hsl(var(--u1),100%, 85% );
+}
+
+#entete {
+  --_couleur-arriere-vague: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+  --_couleur-arriere-vague: var(--couleur-arriere-footer);
+}
+
+/* Création des class de couleurs */
+/* Création de classe de couleur */
+.clr-primaire-100 {
+  color: hsl(220, 100%, 85%);
+}
+
+.bck-primaire-100 {
+  background-color: hsl(220, 100%, 85%);
+}
+
+.clr-primaire-200 {
+  color: hsl(220, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(220, 100%, 60%);
+}
+
+.clr-primaire-300 {
+  color: hsl(220, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(220, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(220, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(220, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(40, 100%, 85%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(40, 100%, 50%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(40, 100%, 50%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(40, 100%, 30%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(40, 100%, 30%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(40, 100%, 15%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(40, 100%, 15%);
+}
+
+.clr-ternaire-100 {
+  color: hsl(10, 100%, 85%);
+}
+
+.bck-ternaire-100 {
+  background-color: hsl(10, 100%, 85%);
+}
+
+.clr-ternaire-200 {
+  color: hsl(10, 100%, 50%);
+}
+
+.bck-ternaire-200 {
+  background-color: hsl(10, 100%, 50%);
+}
+
+.clr-ternaire-300 {
+  color: hsl(10, 100%, 30%);
+}
+
+.bck-ternaire-300 {
+  background-color: hsl(10, 100%, 30%);
+}
+
+.clr-ternaire-400 {
+  color: hsl(10, 100%, 15%);
+}
+
+.bck-ternaire-400 {
+  background-color: hsl(10, 100%, 15%);
+}
+
+.clr-vert-100 {
+  color: hsl(70, 100%, 85%);
+}
+
+.bck-vert-100 {
+  background-color: hsl(70, 100%, 85%);
+}
+
+.clr-vert-200 {
+  color: hsl(70, 100%, 50%);
+}
+
+.bck-vert-200 {
+  background-color: hsl(70, 100%, 50%);
+}
+
+.clr-vert-300 {
+  color: hsl(70, 100%, 30%);
+}
+
+.bck-vert-300 {
+  background-color: hsl(70, 100%, 30%);
+}
+
+.clr-vert-400 {
+  color: hsl(70, 100%, 15%);
+}
+
+.bck-vert-400 {
+  background-color: hsl(70, 100%, 15%);
+}
+
+/* mixin pour agencer des couleurs */
+.clr-agencement-primaire {
+  color: hsl(220, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(220, 100%, 15%), hsl(220, 100%, 60%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(40, 100%, 15%);
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-agencement-ternaire {
+  color: hsl(10, 100%, 15%);
+  background-color: hsl(10, 100%, 85%);
+}
+
+.clr-agencement-vert {
+  color: hsl(70, 100%, 15%);
+  background-color: hsl(70, 100%, 85%);
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flexbox__elm {
+  flex: 1 0 150px;
+  border: 1px solid #aaa;
 }
 
 * {
@@ -34,41 +244,72 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px;
-  border: 1px solid #aaa;
+  flex: 0 1 1100px;
+  padding: 3rem 1rem;
+  background-color: rgba(255, 255, 255, var(--transparence-section));
+}
+
+.global > .entete__header {
+  flex: 1;
+}
+
+#entete, #footer {
+  min-height: 20vh;
+}
+
+#menu__entete {
+  position: relative;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
+  position: relative;
+  min-height: 100vh;
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-accueil);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-evenement);
+  z-index: 1;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-galerie);
+  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
 }
 
+.entete__header {
+  background-image: url("images/wordpress-theme.png");
+  background-repeat: no-repeat;
+  background-position: 95% 40%;
+}
+
+/* //////////////////////////////// */
+/* Base */
+/* //////////////////////////////// */
 /*
 https://chrisburnell.com/clamp-calculator/
 */
 h1 {
-  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  font-size: clamp(1.5rem, -2.656rem + 12.5vw, 4.375rem);
+  letter-spacing: -3px;
   font-weight: 600;
   font-style: normal;
 }
@@ -77,4 +318,157 @@ h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
+}
+
+span {
+  display: block;
+}
+
+a {
+  color: var(--couleur-lien);
+}
+a:hover {
+  color: var(--couleur-lien-hover);
+}
+a:visited {
+  color: var(--couleur-lien-visited);
+}
+
+.bouton {
+  font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
+  padding: 12px 24px;
+  background-image: linear-gradient(120deg, #e8cf54, #f7d306);
+  margin-top: 30px;
+  transition: transform 0.2s;
+  transform: translateY(0);
+}
+
+.bouton:hover {
+  background-image: linear-gradient(120deg, #e19057, #91672b);
+  transform: translateY(-10px);
+}
+
+/* //////////////////////////////// */
+/* Effet */
+/* //////////////////////////////// */
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+}
+
+.vague .remplissage {
+  fill: var(--_couleur-arriere-vague);
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  /*
+  left :0;
+  right:0;
+  top:0;
+  bottom: 0;
+  */
+  inset: 0;
+  background-color: var(--couleur-arriere-diagonal);
+  z-index: -1;
+  transform: skewY(-5deg);
+}
+
+/* //////////////////////////////// */
+/* Composants */
+/* //////////////////////////////// */
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 225px;
+  border: 1px solid #aaa;
+  background-color: var(--_couleur-arriere);
+  padding: 1rem;
+}
+
+.post-categories {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+.post-categories li {
+  background-color: var(--_couleur-principal);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.post-categories li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  transform: translateX(300%);
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    transform: translateX(0);
+  }
+}
+
+.menu-item {
+  flex: 1 0 50px;
+}
+
+.menu-item a {
+  color: #fff;
+}
+
+/* gestion label #burger l'image svg est dans un label */
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu {
+  transform: translateX(0);
+}
+
+#chk_burger {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

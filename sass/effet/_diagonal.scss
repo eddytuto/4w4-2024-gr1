@@ -1,0 +1,23 @@
+.diagonal{
+    position : relative;
+    isolation: isolate;
+    //  z-index: -1;
+}
+
+.diagonal::after {
+    position : absolute;
+    content: "";
+    /*
+    left :0;
+    right:0;
+    top:0;
+    bottom: 0;
+    */
+    inset :0;
+  // background-color:var(--couleur-arriere-entete);
+    background-color:var(--couleur-arriere-diagonal);
+   // opacity : .5;
+    z-index : -1;
+    transform: skewY(-5deg);
+
+}

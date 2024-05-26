@@ -1,0 +1,38 @@
+.destinations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    
+}
+
+.carte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   // align-items: center;
+   // text-align: center;
+    flex: 1  0 calc(900px/4);
+    border : 1px solid #aaa;
+    background-color: var(--_couleur-arriere);
+    padding: 1rem;
+}
+
+.post-categories { // ul de la liste des catégories
+    display: flex;
+    list-style-type: none;
+    gap : 1rem;
+
+    li{
+        background-color: var(--_couleur-principal);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+}
